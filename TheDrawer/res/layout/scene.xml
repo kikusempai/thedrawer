@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/grid">
+    
+    <com.example.thedrawer.PaintView
+        android:id="@+id/paintview"
+        android:layout_width="1200dp"
+        android:layout_height="1200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/toggleCurve"
+        android:text="Curve"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/scenehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play_btn_big"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/toggleDash"
+        android:layout_marginRight="206dp"
+        android:text="Dash"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/hintButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="Hint" />
+
+    <ToggleButton
+        android:id="@+id/toggleCurve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hintButton"
+        android:layout_alignLeft="@+id/toggleDash"
+        android:layout_marginBottom="16dp"
+        android:text="Curve" />
+
+    <ToggleButton
+        android:id="@+id/toggleDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toggleCurve"
+        android:layout_alignLeft="@+id/hintButton"
+        android:layout_marginLeft="25dp"
+        android:text="Dash" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/toggleDash"
+        android:layout_marginTop="17dp"
+        android:text="Figure Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toggleDash"
+        android:layout_alignRight="@+id/toggleDash"
+        android:layout_marginBottom="13dp"
+        android:text="Submit" />
+
+    <ImageView
+        android:id="@+id/referenceImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/nameText"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/ref" />
+
+    <Button
+        android:id="@+id/undoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hintButton"
+        android:layout_alignBottom="@+id/hintButton"
+        android:layout_marginRight="30dp"
+        android:layout_toLeftOf="@+id/nameText"
+        android:text="Undo" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hintButton"
+        android:layout_alignBottom="@+id/hintButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="21dp"
+        android:text="Clear" />
+
+
+    <ImageView
+        android:id="@+id/hintChibi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/undoButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="23dp"
+        android:src="@drawable/hint_chibi"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/resultChibi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginRight="49dp"
+        android:layout_toLeftOf="@+id/referenceImage"
+        android:src="@drawable/lose_chibi"
+        android:visibility="gone" />
+
+</RelativeLayout>
